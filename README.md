@@ -115,7 +115,7 @@ Folder Structure
 
 5. Installation
 5.1. Clone the Repository
-5.1.1. git clone https://github.com/your-username/forever-ecommerce.git
+5.1.1. git clone https://github.com/hustlers9720/forever-ecommerce.git
 5.1.2. cd forever-ecommerce
 
 5.2. Install Dependencies
