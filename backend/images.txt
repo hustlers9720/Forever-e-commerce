@@ -1,0 +1,64 @@
+1. make config file of cloudinary
+2. add env like api key , secret key , name
+ 3.import { v2 as cloudinary } from 'cloudinary'
+
+const connectCloudinary = async () => {
+
+   cloudinary.config({
+         cloud_name: process.env.CLOUDINARY_NAME,
+cloud_api_key: process.env.CLOUDINARY_API_KEY,
+        cloud_secret_key: process.env.CLOUDINARY_SECRET_KEY
+    })
+ }
+
+export default connectCloudinary
+
+ 4.import this in server file
+ 5.     image: { type: Array, required: true }, do this in the model 
+
+ 6.Middleware -- >multer by which i have to stored the images 
+ 7. add upload middleware in the route of which i have to upload images
+8. in the controller fn addd this --> by req.file get the image 
+9. we cant directly storew images so first store thwm on cloudinary and then take link from there and store this in db
+
+
+
+
+
+
+
+
+
+
+ // 1. make all the connection express , mongoose all 
+ // 2. make models --> the things i want as input  example user
+// 3. make controllers ==> logic for the user login or logout (make route for the api)
+// 4. make the route by which i have to call the controller fn (example --> 
+
+
+// route for login user
+const logInUser = async (req, res) => {
+
+}
+
+// route for register user
+const registerUser = async (req, res) => {
+
+}
+
+
+// route for admin login
+const adminLogin = async (req, res) => {
+
+}
+export { logInUser, registerUser, adminLogin } )
+//5. go to server file and add endpoint . ( example --> app.use('/api/user', userRouter))
+
+
+
+
+// for the payment gateway 
+1 . make seceret key 
+2. import stripe (const stripe = new Stripe(process.env.STRIPE_SECRET_KEY))
+3.now make the controoller fn for the functioning  and also generate instance of it 
+
